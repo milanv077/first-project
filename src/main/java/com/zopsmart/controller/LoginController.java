@@ -44,7 +44,7 @@ public class LoginController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
     })
     public String loginPage() throws InterruptedException {
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         return "signin";
     }
     public String fallback_register() {
