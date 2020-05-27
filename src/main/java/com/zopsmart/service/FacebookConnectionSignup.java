@@ -1,4 +1,4 @@
-package com.zopsmart;
+package com.zopsmart.service;
 
 import com.zopsmart.model.User;
 import com.zopsmart.repository.UserRepository;

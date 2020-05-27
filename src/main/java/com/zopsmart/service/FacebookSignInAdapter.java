@@ -1,4 +1,4 @@
-package com.zopsmart;
+package com.zopsmart.service;
 
 import java.util.Arrays;
 
@@ -14,7 +14,6 @@ import org.springframework.web.context.request.NativeWebRequest;
 public class FacebookSignInAdapter implements SignInAdapter {
     @Override
     public String signIn(String localUserId, Connection<?> connection, NativeWebRequest request) {
-        System.out.println(" ====== Sign In adapter");
         SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(connection.getDisplayName(), null, Arrays.asList(new SimpleGrantedAuthority("FACEBOOK_USER"))));
         return null;
     }
