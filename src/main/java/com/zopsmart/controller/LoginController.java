@@ -39,16 +39,10 @@ public class LoginController {
         model.addAttribute("user",new User());
         return "signup";
     }
+
     @GetMapping("/login")
-    @HystrixCommand(fallbackMethod = "fallback_register", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
-    })
     public String loginPage() throws InterruptedException {
-        Thread.sleep(3000);
         return "signin";
-    }
-    public String fallback_register() {
-        return "error";
     }
 
     @PostMapping("/register")

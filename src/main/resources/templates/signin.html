@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign in</title>
-    <link rel="stylesheet" href="/css/signin.css">
-    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -31,6 +29,10 @@
 
     </div>
 </form>
+    <form th:action="@{/signin/facebook}" method="POST">
+        <input type="hidden" name="scope" value="public_profile" />
+        <input type="submit" value="Login using Facebook" class="btn btn-primary" />
+    </form>
 </div>
 </body>
 </html>
