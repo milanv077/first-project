@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" isELIgnored="false" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+
+<div class="main-div">
+
+<form th:action="@{/login}"  method="post">
+    <div th:if="${param.error != null}">
+       <h1 style="color: red">Invalid Credentials</h1>
+    </div>
+    <div class="div1">
+        <h1>Sign in</h1>
+    </div>
+
+    <div class="div2" >
+        <input type="text" name="username"   placeholder="Enter your email/Mobile number" id="signin-email" required><br>
+        <input type="password" name="password"  placeholder="Enter your password" id="signin-password" required>
+    </div>
+    <div class="div3">
+
+        <button>LOGIN</button>
+        <a href="/signup">Need an account?</a>
+<!--        <a href="/forgot">Forgot password?</a>-->
+
+    </div>
+</form>
+</div>
+</body>
+</html>

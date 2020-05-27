@@ -1,0 +1,168 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 1%;
+    margin:  auto 15%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    padding: 2vh;
+    font-size: 1.3vw;
+}
+.header-left a{
+    color: #5cb85c;
+    font-size: 1.5vw;
+}
+.header-right a{
+    color: rgba(0,0,0,.3);
+}
+.header-right a:hover{
+    color: black;
+}
+
+.user-list{
+    width: 61%;
+    height: 87vh;
+    /* background: red; */
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.container{
+    padding: 1%;
+    margin:  auto 15%;
+    height: 100%;
+
+}
+.container-1{
+    position: relative;
+    width: 100vw;
+    margin-left: -34vh;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: -2%;
+    background-color: #5cb85c;
+    color: white;
+}
+.container-1 h1{
+    font-size: 50px;
+    margin-bottom: 5vh;
+
+}
+.container-1 h3{
+    margin-top: -2%;
+    font-size: 30px;
+}
+.container-2{
+    width: 100%;
+    height: 75%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-2-left{
+    width: 73%;
+    height: 100%;
+
+}
+.div-post{
+    /*margin-bottom: 3%;*/
+    display: flex;
+    flex-direction: column;
+}
+.div-post-1{
+    display: flex;
+    flex-direction: row;
+}
+.div-post-2{
+
+}
+.div-post-3{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+.div-post-3 a{
+    width: auto;
+    text-decoration: none;
+    color: black;
+}
+.div-post-3 a:hover{
+    background-color: black;
+    color: white;
+}
+ul{
+    margin-left: 15%;
+    margin-bottom: 5%;
+    display: flex;
+}
+li{
+    display: inline;
+    margin-right: 1%;
+}
+.img-post{
+    width: 7%;
+    height:7%;
+    margin-top: 1%;
+}
+.div-post-2 a{
+   text-decoration: none;
+    color: grey;
+}
+.div-post-2 a:hover{
+  color: black;
+
+}
+.index-globalBlog{
+    color: grey;
+    text-decoration: none;
+}
+.index-globalBlog:hover{
+    color: black;
+}
+.container-2-right-tags-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+.container-2-right{
+    width: 25%;
+    height: 30%;
+}
+.container-2-right p{
+    font-size: 20px;
+}
+.container-2-right-tags{
+
+display: flex;
+    flex-wrap: wrap;
+
+}
+.container-2-right-tags a{
+
+    background-color: cadetblue;
+    margin: 3%;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 20px;
+
+}
+
+footer{
+    position: relative;
+}

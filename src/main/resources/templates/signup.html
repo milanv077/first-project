@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+
+</head>
+
+<body>
+<div class="main-div">
+
+<form  method="post" th:action="@{/register}" th:object="${user}">
+    <div >
+        <p style="color: red" th:text="${error}"></p>
+    </div>
+    <div class="div1">
+        <h1>Sign Up</h1>
+    </div>
+    <div class="div2" >
+        <input type="text" th:field="*{firstName}" placeholder="Enter your first name" id="signup-fname" required><br>
+        <input type="text" th:field="*{lastName}" placeholder="Enter your last name" id="signup-lname" required><br>
+        <input type="email" th:field="*{email}" placeholder="Enter your email" id="signup-email" required><br>
+        <input type="number" th:field="*{mobileNumber}" placeholder="Enter your mobile number" id="signup-password" required><br>
+        <input type="password" th:field="*{password}" placeholder="Enter your password" id="signup-confirmPassword" required>
+    </div>
+    <div class="div3">
+        <button>REGISTER</button>
+        <a href="/signin">Already have account?</a>
+    </div>
+</form>
+</div>
+</body>
+</html>
