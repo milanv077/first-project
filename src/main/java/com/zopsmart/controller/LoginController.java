@@ -40,14 +40,14 @@ public class LoginController {
         return "signup";
     }
     @GetMapping("/login")
-    @HystrixCommand(fallbackMethod = "fallback_register", commandProperties = {
+    @HystrixCommand(fallbackMethod = "fallback_login", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
     })
     public String loginPage() throws InterruptedException {
-//        Thread.sleep(3000);
+        Thread.sleep(3000);
         return "signin";
     }
-    public String fallback_register() {
+    public String fallback_login() {
         return "error";
     }
 
@@ -70,7 +70,7 @@ public class LoginController {
             model.addAttribute("error","Email already exist");
             return "signup";
         }
-        return "redirect:/signin";
+        return "redirect:/login";
     }
 
 
